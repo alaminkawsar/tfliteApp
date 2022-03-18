@@ -29,6 +29,7 @@
 		1DA8198F27E47BE200C46107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DA8199527E4901400C46107 /* ModelParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelParser.swift; sourceTree = "<group>"; };
 		1DA8199827E49B6300C46107 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
+		1DFFA59B27E4F379007C182E /* ResourseLink.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ResourseLink.md; sourceTree = "<group>"; };
 		534B7B65976CCB355EF8813B /* Pods-tfliteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tfliteApp.release.xcconfig"; path = "Target Support Files/Pods-tfliteApp/Pods-tfliteApp.release.xcconfig"; sourceTree = "<group>"; };
 		7EF42C8C80721DA4D22AE1BA /* Pods_tfliteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tfliteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23DCEE79C6FD10680F801AD /* Pods-tfliteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tfliteApp.debug.xcconfig"; path = "Target Support Files/Pods-tfliteApp/Pods-tfliteApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		1DA8197527E47BE100C46107 = {
 			isa = PBXGroup;
 			children = (
+				1DFFA59B27E4F379007C182E /* ResourseLink.md */,
 				1DA8198027E47BE100C46107 /* tfliteApp */,
 				1DA8197F27E47BE100C46107 /* Products */,
 				7B80F7CAAD2C9F42CE69A4FA /* Pods */,
@@ -356,7 +358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BD7Y2B4ZKU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tfliteApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TfLiteApp;
@@ -386,7 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = BD7Y2B4ZKU;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tfliteApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TfLiteApp;
