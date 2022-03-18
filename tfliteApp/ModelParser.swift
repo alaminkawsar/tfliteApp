@@ -13,6 +13,8 @@ typealias FileInfo = (name: String, extension: String)
 enum ModelFile {
     
     static let modelInfo: FileInfo = (name: "model", extension: "tflite")
+}
+class ModelParser {
     // declare a interpreter
     private var interpreter: Interpreter
     
@@ -31,7 +33,7 @@ enum ModelFile {
         
         // load the model from the file path
         do {
-            interpreter = try interpreter(modelPath: modelPath)
+            interpreter = try Interpreter(modelPath: modelPath)
         }
         catch let error
         {
@@ -48,9 +50,10 @@ enum ModelFile {
                 // swift doesn't tensor data type, so we'll need to write the data directly
                 //memory in an unsafeMutableBufferPointer
                 var data: Float = input
-                let buffer: UnsafeMutableRawBufferPointer<Float> = UnsafeMutableRawBufferPointer(start: &data, count: 1)
+                let buffer: UnsafeMutableBufferPointer<Float> =
+                         UnsafeMutableBufferPointer(start: &data, count: 1)
                 
-                try interpreter.copy(Data(buffer: buffer), toInput(at: 0))
+                try interpreter.copy(Data(buffer: buffer), toInputAt: 0)
                 
                 try interpreter.invoke()
                 
