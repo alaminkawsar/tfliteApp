@@ -13,6 +13,9 @@
 		1DA8198927E47BE100C46107 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA8198727E47BE100C46107 /* Main.storyboard */; };
 		1DA8198B27E47BE200C46107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DA8198A27E47BE200C46107 /* Assets.xcassets */; };
 		1DA8198E27E47BE200C46107 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DA8198C27E47BE200C46107 /* LaunchScreen.storyboard */; };
+		1DA8199627E4901400C46107 /* ModelParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA8199527E4901400C46107 /* ModelParser.swift */; };
+		1DA8199927E49B6300C46107 /* model.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 1DA8199827E49B6300C46107 /* model.tflite */; };
+		913A4F28A97ACDFAD543891D /* Pods_tfliteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF42C8C80721DA4D22AE1BA /* Pods_tfliteApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		1DA8198A27E47BE200C46107 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DA8198D27E47BE200C46107 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DA8198F27E47BE200C46107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DA8199527E4901400C46107 /* ModelParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelParser.swift; sourceTree = "<group>"; };
+		1DA8199827E49B6300C46107 /* model.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.tflite; sourceTree = "<group>"; };
+		534B7B65976CCB355EF8813B /* Pods-tfliteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tfliteApp.release.xcconfig"; path = "Target Support Files/Pods-tfliteApp/Pods-tfliteApp.release.xcconfig"; sourceTree = "<group>"; };
+		7EF42C8C80721DA4D22AE1BA /* Pods_tfliteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tfliteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23DCEE79C6FD10680F801AD /* Pods-tfliteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tfliteApp.debug.xcconfig"; path = "Target Support Files/Pods-tfliteApp/Pods-tfliteApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913A4F28A97ACDFAD543891D /* Pods_tfliteApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				1DA8198027E47BE100C46107 /* tfliteApp */,
 				1DA8197F27E47BE100C46107 /* Products */,
+				7B80F7CAAD2C9F42CE69A4FA /* Pods */,
+				8D6E5200B111D792BCC584BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +70,39 @@
 				1DA8198127E47BE100C46107 /* AppDelegate.swift */,
 				1DA8198327E47BE100C46107 /* SceneDelegate.swift */,
 				1DA8198527E47BE100C46107 /* ViewController.swift */,
+				1DA8199527E4901400C46107 /* ModelParser.swift */,
+				1DA8199727E497FE00C46107 /* models */,
 				1DA8198727E47BE100C46107 /* Main.storyboard */,
 				1DA8198A27E47BE200C46107 /* Assets.xcassets */,
 				1DA8198C27E47BE200C46107 /* LaunchScreen.storyboard */,
 				1DA8198F27E47BE200C46107 /* Info.plist */,
 			);
 			path = tfliteApp;
+			sourceTree = "<group>";
+		};
+		1DA8199727E497FE00C46107 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1DA8199827E49B6300C46107 /* model.tflite */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		7B80F7CAAD2C9F42CE69A4FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B23DCEE79C6FD10680F801AD /* Pods-tfliteApp.debug.xcconfig */,
+				534B7B65976CCB355EF8813B /* Pods-tfliteApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D6E5200B111D792BCC584BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EF42C8C80721DA4D22AE1BA /* Pods_tfliteApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +112,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DA8199227E47BE200C46107 /* Build configuration list for PBXNativeTarget "tfliteApp" */;
 			buildPhases = (
+				C095081210B21E1C2EA8F1F3 /* [CP] Check Pods Manifest.lock */,
 				1DA8197A27E47BE100C46107 /* Sources */,
 				1DA8197B27E47BE100C46107 /* Frameworks */,
 				1DA8197C27E47BE100C46107 /* Resources */,
@@ -128,10 +167,36 @@
 				1DA8198E27E47BE200C46107 /* LaunchScreen.storyboard in Resources */,
 				1DA8198B27E47BE200C46107 /* Assets.xcassets in Resources */,
 				1DA8198927E47BE100C46107 /* Main.storyboard in Resources */,
+				1DA8199927E49B6300C46107 /* model.tflite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C095081210B21E1C2EA8F1F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tfliteApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1DA8197A27E47BE100C46107 /* Sources */ = {
@@ -140,6 +205,7 @@
 			files = (
 				1DA8198627E47BE100C46107 /* ViewController.swift in Sources */,
 				1DA8198227E47BE100C46107 /* AppDelegate.swift in Sources */,
+				1DA8199627E4901400C46107 /* ModelParser.swift in Sources */,
 				1DA8198427E47BE100C46107 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +350,7 @@
 		};
 		1DA8199327E47BE200C46107 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B23DCEE79C6FD10680F801AD /* Pods-tfliteApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -291,6 +358,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tfliteApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TfLiteApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -311,6 +379,7 @@
 		};
 		1DA8199427E47BE200C46107 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 534B7B65976CCB355EF8813B /* Pods-tfliteApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +387,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = tfliteApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TfLiteApp;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
