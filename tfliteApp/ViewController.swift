@@ -22,14 +22,14 @@ class ViewController: UIViewController {
   private func doInference() {
       
     guard let text = textUserData.text, text.count > 0 else {
-      txtResult.text = "0.00"
+      textResult.text = "0.00"
       return
     }
     guard let value = Float(text) else {
       return
     }
-    guard let result = self.modelParser?.runModel(withInput: value) else {
-      return
+      guard let result = self.modelParser?.runModel(withInput: value) else {
+          return
     }
     textResult.text = String(format: "%.2f", result)
   }

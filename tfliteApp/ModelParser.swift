@@ -40,6 +40,7 @@ class ModelParser {
             print("Failed to create the interpreter")
             return nil
         }
+    }
         
         
        // pass the input and run the model
@@ -73,7 +74,7 @@ class ModelParser {
             
         }
     }
-}
+
 
 // add the array extension that handles the unsafe data and loads it into an array
 extension Array {
